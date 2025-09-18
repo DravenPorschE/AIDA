@@ -1,5 +1,5 @@
 ````markdown
-# Android Studio Git Setup
+## Android Studio Git Setup
 
 ## Clone the project
 ```bash
@@ -26,5 +26,3 @@ git push origin main
 ```
 
 👉 Always **pull before push** to avoid conflicts.
-
-```
