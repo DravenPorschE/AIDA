@@ -1,5 +1,3 @@
-Got it ✅ here’s a **bare minimum README.md** with only the commands your friend needs:
-
 ````markdown
 # Android Studio Git Setup
 
