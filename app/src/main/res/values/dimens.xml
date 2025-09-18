@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General paddings -->
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="status_layout_padding">10dp</dimen>
+    <dimen name="display_screen_padding">20dp</dimen>
+
+    <!-- Status bar height -->
+    <dimen name="status_layout_height">60dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="status_text_size">20sp</dimen>
+    <dimen name="command_text_size">20sp</dimen>
+    <dimen name="display_text_size">22sp</dimen>
+
+    <!-- Image sizes -->
+    <dimen name="ai_image_size">250dp</dimen>
+    <dimen name="button_size">72dp</dimen>
+    <dimen name="button_margin_end">16dp</dimen>
+</resources>

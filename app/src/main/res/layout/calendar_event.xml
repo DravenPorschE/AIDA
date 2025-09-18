@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendarTable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*"
+    android:shrinkColumns="*"
+    android:background="@android:color/black">
+
+    <!-- Month Title -->
+    <TableRow
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/monthTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:text="January 2025"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/monthChooserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="#2196F3"
+            android:textColor="@color/white"
+
+            android:text="Choose Month"/>
+
+    </TableRow>
+
+    <!-- Days of Week -->
+    <TableRow>
+        <TextView style="@style/CalendarHeader" android:text="Sun"/>
+        <TextView style="@style/CalendarHeader" android:text="Mon"/>
+        <TextView style="@style/CalendarHeader" android:text="Tue"/>
+        <TextView style="@style/CalendarHeader" android:text="Wed"/>
+        <TextView style="@style/CalendarHeader" android:text="Thu"/>
+        <TextView style="@style/CalendarHeader" android:text="Fri"/>
+        <TextView style="@style/CalendarHeader" android:text="Sat"/>
+    </TableRow>
+
+    <!-- 6 weeks (42 cells max) -->
+    <TableRow>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_0"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_1"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_2"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_3"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_4"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_5"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_6"/>
+    </TableRow>
+    <TableRow>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_7"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_8"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_9"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_10"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_11"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_12"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_13"/>
+    </TableRow>
+    <TableRow>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_14"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_15"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_16"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_17"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_18"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_19"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_20"/>
+    </TableRow>
+    <TableRow>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_21"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_22"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_23"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_24"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_25"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_26"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_27"/>
+    </TableRow>
+    <TableRow>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_28"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_29"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_30"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_31"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_32"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_33"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_34"/>
+    </TableRow>
+    <TableRow>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_35"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_36"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_37"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_38"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_39"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_40"/>
+        <TextView style="@style/CalendarCell" android:id="@+id/cell_41"/>
+    </TableRow>
+</TableLayout>

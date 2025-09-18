@@ -1,0 +1,20 @@
+[
+  "close_alarm",
+  "close_calendar",
+  "close_note",
+  "close_search",
+  "create_calendar_event",
+  "create_note",
+  "delete_calendar_event",
+  "delete_note",
+  "introduce_yourself",
+  "open_calendar",
+  "open_calendar_specific_month",
+  "open_notes",
+  "search_online",
+  "set_alarm",
+  "show_event_on_calendar",
+  "start_live_meeting",
+  "stop_live_meeting",
+  "summarize_meeting"
+]

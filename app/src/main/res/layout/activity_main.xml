@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/outer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="#e8e3e3">
+
+        <!-- STATUS BAR -->
+        <LinearLayout
+            android:id="@+id/status_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/status_layout_height"
+            android:orientation="horizontal"
+            android:padding="@dimen/status_layout_padding">
+
+            <TextView
+                android:id="@+id/status_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/layout_padding"
+                android:text="Sleeping..."
+                android:textSize="@dimen/status_text_size" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingLeft="@dimen/layout_padding"
+                android:text="AI Ready"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/status_text_size" />
+        </LinearLayout>
+
+        <!-- DISPLAY SCREEN -->
+        <LinearLayout
+            android:id="@+id/display_screen_layout"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="542dp"
+            android:layout_weight="1"
+            android:background="@drawable/inner_workspace_bg">
+
+            <LinearLayout
+                android:id="@+id/display_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/display_screen_padding">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <TextView
+                        android:id="@+id/text_display"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif-monospace"
+                        android:text="None"
+                        android:textSize="@dimen/display_text_size"
+                        android:visibility="gone" />
+
+                </ScrollView>
+
+                <ImageView
+                    android:id="@+id/aiImage"
+                    android:layout_width="@dimen/ai_image_size"
+                    android:layout_height="@dimen/ai_image_size"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ai_processing"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/command_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="sans-serif"
+                    android:text="Say... Hey Aida!"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/command_text_size"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/current_app_display_container"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/current_app_display"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Blank App"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        android:padding="8dp"/>
+
+                    <Button
+                        android:id="@+id/addNoteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add New Note"
+                        android:background="#2196F3"
+                        android:textColor="#ffffff"
+                        android:layout_marginRight = "10dp"
+                        android:padding="5dp"
+
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/exit_app_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Close App"
+                        android:background="#F44336"
+                        android:textColor="#ffffff"
+                        android:padding="5dp"
+
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <ScrollView
+                    android:id="@+id/scroll_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    tools:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/note_app_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:visibility="gone"/>
+
+                </ScrollView>
+                <!-- TODO: Create a calendar table layout -->
+                <FrameLayout
+                    android:id="@+id/calendarContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/alarm_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:background="#EEEEEE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <!-- Time -->
+                    <TextView
+                        android:id="@+id/alarm_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07:00 AM"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <!-- Label -->
+                    <TextView
+                        android:id="@+id/alarm_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alarm Label"
+                        android:textSize="14sp"
+                        android:textColor="#555555"
+                        android:paddingTop="4dp" />
+
+                    <!-- Start & Cancel Buttons -->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="16dp">
+
+                        <Button
+                            android:id="@+id/start_alarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Alarm" />
+
+                        <Button
+                            android:id="@+id/cancel_alarm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cancel Alarm"
+                            android:layout_marginStart="16dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/meetingModeDisplay"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="#DDDDDD"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <!-- Grey rectangle placeholder for meeting content -->
+                    <FrameLayout
+                        android:id="@+id/meeting_placeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#CCCCCC"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/meeting_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Live Meeting in Progress..."
+                            android:textSize="18sp"
+                            android:textColor="#333333"/>
+                    </FrameLayout>
+
+                    <!-- Play (Start) button -->
+                    <ImageButton
+                        android:id="@+id/playButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:src="@drawable/ic_play_arrow"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Start Recording"
+                        android:layout_gravity="center"
+                        android:visibility="visible"/>
+
+                    <!-- Stop button -->
+                    <ImageButton
+                        android:id="@+id/stopButton"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:src="@drawable/ic_stop"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="Stop Recording"
+                        android:layout_gravity="center"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ACTION BUTTONS -->
+        <LinearLayout
+            android:id="@+id/action_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/alarmButton"
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/clock_icon" />
+
+            <ImageButton
+                android:id="@+id/noteButton"
+                android:layout_width="66dp"
+                android:layout_height="63dp"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/note_icon" />
+
+            <ImageButton
+                android:id="@+id/aiStatusButton"
+                android:layout_width="61dp"
+                android:layout_height="62dp"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ai_status"
+                tools:src="@drawable/ai_processing" />
+
+            <ImageButton
+                android:id="@+id/calendarButton"
+                android:layout_width="62dp"
+                android:layout_height="61dp"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calendar_icon" />
+
+            <ImageButton
+                android:id="@+id/meetingButton"
+                android:layout_width="62dp"
+                android:layout_height="61dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/meeting_mode" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
